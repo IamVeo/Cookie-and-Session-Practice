@@ -24,7 +24,6 @@ public class ProfileController {
     @GetMapping("/profile")
     public ResponseEntity<?> getProfile(HttpSession session) {
         if (!authService.isLoggedIn(session)) {
-            // Trong thực tế API sẽ trả về 401 để FE điều hướng về /login
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body("Vui lòng đăng nhập để truy cập trang này!");
         }

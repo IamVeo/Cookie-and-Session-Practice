@@ -17,8 +17,8 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(authInterceptor)
                 .addPathPatterns("/api/profile", "/api/admin/**")
                 .excludePathPatterns(
-                        "/api",          // Thêm cái này để khớp với Postman bạn dùng
-                        "/api/",         // Giữ cái này cho trình duyệt
+                        "/api",
+                        "/api/",
                         "/api/login",
                         "/api/set-theme/**"
                 );
